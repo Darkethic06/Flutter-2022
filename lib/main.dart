@@ -1,5 +1,7 @@
+import 'package:app1/views/gridpage.dart';
 import 'package:app1/views/homepage.dart';
 import 'package:app1/views/list.dart';
+import 'package:app1/views/timeline.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const AppList(),
+      home: const MyGrid(),
       debugShowCheckedModeBanner: false,
     );
   }
