@@ -1,6 +1,9 @@
+
+import 'package:app1/utils/ownColor.dart';
 import 'package:app1/views/gridpage.dart';
 import 'package:app1/views/homepage.dart';
 import 'package:app1/views/list.dart';
+import 'package:app1/views/loginPage.dart';
 import 'package:app1/views/timeline.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +20,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MyFirst App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: white,
+        // primaryColor: Colors.white
       ),
-      home: const MyGrid(),
+      home: const LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }
