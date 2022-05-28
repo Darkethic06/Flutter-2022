@@ -1,4 +1,8 @@
+import 'package:app1/views/registration.dart';
 import 'package:flutter/material.dart';
+import 'package:social_auth_buttons/res/buttons/google_auth_button.dart';
+import 'package:social_auth_buttons/res/shared/auth_button_style.dart';
+import 'package:social_login_buttons/social_login_buttons.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -92,10 +96,26 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(8))),
               ),
             ),
-            ElevatedButton(onPressed: () {
-print(emailController.text);
-print(passController.text);
-            }, child: Text("Submit"))
+            ElevatedButton(
+                onPressed: () {
+                  print(emailController.text);
+                  print(passController.text);
+                },
+                child: Text("Submit")),
+            SocialLoginButton(
+                buttonType: SocialLoginButtonType.facebook,
+                onPressed: () {},
+              ),
+            MaterialButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => RegisterPage()));
+              },
+              child: Text(
+                "Register Now",
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            )
           ],
         ),
       ),
