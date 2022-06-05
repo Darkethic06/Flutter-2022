@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: white,
         // primaryColor: Colors.white
       ),
-      home: const LoginPage(),
+      home: LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }
